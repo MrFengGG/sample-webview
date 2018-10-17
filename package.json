@@ -1,0 +1,47 @@
+{
+  "name": "react-antd",
+  "version": "1.0.0",
+  "description": "使用react_antd搭建的前端页面",
+  "main": "index.js",
+  "scripts": {
+    "build":"webpack --config ./config/webpack.config.js"
+  },
+  "author": "feng",
+  "license": "ISC",
+  "dependencies": {
+    "antd": "^3.10.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-import": "^1.9.1",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^1.0.0",
+    "eslint": "^5.7.0",
+    "eslint-loader": "^2.1.1",
+    "eslint-plugin-react": "^7.11.1",
+    "html-webpack-plugin": "^3.2.0",
+    "react": "^16.5.2",
+    "react-dev-utils": "^6.0.5",
+    "react-dom": "^16.5.2",
+    "react-router-dom": "^4.3.1",
+    "style-loader": "^0.23.1",
+    "url-loader": "^1.1.2",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.9"
+  },
+  "babel":{
+    "presets": [
+      "es2015",
+      "react"
+    ],
+    "plugins": ["transform-class-properties",["import", {
+      "libraryName": "antd",
+      "libraryDirectory": "es",
+      "style": "css"
+    }]]
+  }
+}
