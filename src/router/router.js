@@ -1,7 +1,7 @@
 import React from 'react';
-import {HashRouter,Route,Switch,Link} from 'react-router-dom'
+import {HashRouter,Route,Switch,Link,Table} from 'react-router-dom'
 
-import Sider from '../page/index'
+import Index from '../page/Index/Index'
 
 export default class AppRouter extends React.Component {
     constructor(props) {
@@ -11,7 +11,7 @@ export default class AppRouter extends React.Component {
         return (
             <HashRouter>
                 <div id="wrapper">
-                    <Route path="/" component={Sider}/>
+                    <Route path="/" component={Index}/>
                 </div>
             </HashRouter>
         )

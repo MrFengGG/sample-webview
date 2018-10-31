@@ -8,5 +8,7 @@ const resolveAppPath = relativePath => path.resolve(appDirectory, relativePath);
 module.exports = {
     mainJs:resolveAppPath('src/main.js'),
     html:resolveAppPath('public/index.html'),
-    buildPath:resolveAppPath('dist'),
+    buildPath:resolveAppPath('static'),
+    rootPath:appDirectory,
+    mockPath:resolveAppPath("mock/proxy.js")
 };
