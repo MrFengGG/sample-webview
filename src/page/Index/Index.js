@@ -1,11 +1,14 @@
 import React from 'react';
-import { Layout, Menu, Icon,Table} from 'antd';
-require("./index.css")
-const { Header, Content,Footer} = Layout;
+import { Layout, Icon} from 'antd';
 import {Route,HashRouter,Link,Redirect} from 'react-router-dom'
 import JobList from "../JobList/JobList"
 import SiderMenu from "../../component/SliderMenu/SiderMenu"
 import getMenus from "../../common/menu"
+import DashBoard from "../dashBoard/DashBoard"
+
+import './index.css'
+
+const { Header, Content,Footer} = Layout;
 
 export default class Index extends React.Component {
   constructor(props){
@@ -52,12 +55,13 @@ export default class Index extends React.Component {
             <HashRouter>
               <div>
                 <Route path="/jobList" component={JobList}></Route>
+                <Route path="/dashBoard" component={DashBoard}></Route>
                 <Redirect path="/" to={{pathname: '/jobList'}} />
               </div>
             </HashRouter>
           </Content>
           <Footer style={{ textAlign: 'center' }}>
-            TimeTask ©2018 Created by Apex Soft
+            TimeTask ©2018 Created by Feng
           </Footer>
         </Layout>
       </Layout>

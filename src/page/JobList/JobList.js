@@ -45,7 +45,6 @@ export default class JobList extends React.Component {
         fetch("/work/get",{}).then(response => response.json()).then(json =>{
             addFormProps.formItemDataList[3]['options'] = json;
             updateFormProps.formItemDataList[3]['options'] = json;
-            console.log(updateFormProps)
             this.setState({addFormProps:addFormProps,updateFormProps:updateFormProps})
         })
     }
@@ -196,7 +195,7 @@ export default class JobList extends React.Component {
             body: JSON.stringify(params)
         }).then(response => {
             if(response.ok){
-                this.fetchData(); 
+                this.fetchTableData(); 
                 this.optSuccess("操作提示","操作成功")
             }else{
                 this.optSuccess("操作提示","操作失败")
